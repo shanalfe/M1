@@ -1,0 +1,30 @@
+1. Le role stubs 
+et skeletons 
+
+Objet distant (contrat) : c'est l'interface
+
+
+Le client utilise l'interface.
+
+Le représentateur local est le skeletons.
+
+2.
+
+Les valeurs (pour primitive) peuvent être changé sans impact : valeur de la donnée et non la donnée
+Les références (pointeur, adresse...) pour les objets cela suppose que l'on va chercher les données
+à modifier via les références. Fait appel à un espace.
+
+Le passage de reference ne se fait pas comme les appels classiques.
+
+Seul les valeurs peuvent transiter sur le réseau et non les références. 
+On simile le passage des références par copie de l'objet. On clone tout l'objet.
+Envoyer un objet sur le réseau nécéssite une sécurité. 
+Il faut une autorisation pour sortir l'objet de la mémoire. Il faut copier la mémoire. En java, cela
+passe par des canaux et flux. Les flux transporte des petites briques. Alors l'objet doit être 
+transformer en bébé brique -> serialisation. Donc implémentation de classe serializable.
+
+3.
+
+Il faut que les deux classes soient serializable. Il faut implémenter !
+
+1. Developpement des Stub et des skeletons
